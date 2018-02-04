@@ -1,4 +1,6 @@
-# pl-milo-test
+# pl-milo-test (Django test)
+
+## Django test
 
 installation
 ------------
@@ -12,3 +14,13 @@ Run
 5. python manage.py runserver
 ```
 Python 3.6 and Django 2.0.2
+
+## Python test
+
+run
+------------
+
+```
+1. open console with python 3.6
+2. run file date-parser.py
+```
