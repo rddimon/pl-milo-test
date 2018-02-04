@@ -1,0 +1,36 @@
+{% extends "master.html" %}
+{% load milo %}
+
+{% block content %}
+    <style>
+        li span,
+        li a {
+            display: inline-block;
+            width: 100px;
+            text-align: center;
+        }
+    </style>
+    <a href="{% url 'account_user_new' %}">Add user</a>
+    <br/>
+    <br/>
+    <br/>
+
+    <ul>
+        {% for user in users %}
+            <li>
+                <a href="{% url 'account_user_detail' user.id %}">{{ user.username }}</a>&nbsp;|&nbsp;
+                <span>{{ user.birthday }}</span>&nbsp;|&nbsp;
+                <span>{% is_age_enough user.birthday %}</span>&nbsp;|&nbsp;
+                <span>{{ user.number }}</span>&nbsp;|&nbsp;
+                <span>{% biz_faz user.number %}</span>&nbsp;|&nbsp;
+            </li>
+        {% endfor %}
+    </ul>
+
+     <br/>
+    <br/>
+    <br/>
+
+    <a href="{% url 'account_user_list_download' %}">Download scv</a>
+
+{% endblock %}

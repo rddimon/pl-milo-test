@@ -1,0 +1,20 @@
+{% extends "master.html" %}
+
+{% block content %}
+    <a href="/">Home</a>
+
+    <br/>
+    <br/>
+    <br/>
+
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+
+    <br/>
+    <br/>
+    <br/>
+
+    <a href="{% url 'account_user_delete' form.instance.pk %}">Delete</a>
+{% endblock %}
