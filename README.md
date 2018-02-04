@@ -1,4 +1,4 @@
-# pl-milo-test (Django test)
+# pl-milo-test
 
 ## Django test
 
